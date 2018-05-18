@@ -18,67 +18,14 @@
 <script>
 export default {
   name: "HomeIcons",
+  props:{
+    iconList:Array
+  },
   data() {
     return { 
       swiperOption: {
           loop:false
-      },
-      iconList: [
-        {
-          id: "001",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "自然风光加啊啊"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "滑雪季节"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "泡温泉"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "动物眼"
-        },
-        {
-          id: "006",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "007",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "一日游"
-        },
-        {
-          id: "008",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "云南"
-        },
-        {
-          id: "009",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "昆明"
-        },
-        {
-          id: "010",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "大连"
-        }
-      ]
+      }
     };
   },
   computed:{
@@ -119,7 +66,7 @@ export default {
             right: 0;
             bottom: 0.44rem;
             box-sizing: border-box;
-            padding: 0.1rem;
+            padding: 0.2rem;
 
             .icon-img-content {
                 display: block;
@@ -134,6 +81,7 @@ export default {
             right: 0;
             bottom: 0;
             height: 0.44rem;
+            font-size .25rem
             line-height: 0.44rem;
             color: $darkTextColor;
             text-align: center;

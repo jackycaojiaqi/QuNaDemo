@@ -8,7 +8,7 @@
       <span class="iconfont">&#xe6ac;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">城市
+    <div class="header-right">{{city}}
       <span class="iconfont arrow-down">&#xe64a;</span>
     </div>
   </div>
@@ -16,7 +16,11 @@
 
 <script>
   export default {
-    name: 'home'
+    name: 'HomeHeader',
+    props:{
+      city :String
+    }
+
   }
 </script>
 <style lang="stylus" scoped>
