@@ -9,6 +9,7 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 fasterclick.attach(document.body)
@@ -16,6 +17,7 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store: store,
   router: router,
   components: {App: App},
   template: '<App/>'
