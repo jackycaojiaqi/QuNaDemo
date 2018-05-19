@@ -15,6 +15,7 @@
   import HomeRecommend from './components/Recommend'
   import HomeWeekend from './components/Weekend'
   import axios from 'axios'
+  import {mapState} from 'vuex'
   export default {
     name: 'Home',
     components: {
@@ -26,7 +27,7 @@
     },
     data(){
       return{
-        
+        lastCity:'',
         swiperList:[],
         iconList:[],
         recommendList:[],
@@ -35,7 +36,7 @@
     },
     methods:{
         getHomeInfo(){
-            axios.get('static/mock/index.json')
+            axios.get('static/mock/index.json?city=' + this.city)
               .then(this.getHomeInfoSucc)
         },
         getHomeInfoSucc(res){
@@ -51,7 +52,18 @@
         }
     },
     mounted(){
+        this.lastCity = this.city
         this.getHomeInfo()
+    },
+    computed:{
+      ...mapState(['city'])
+    },
+    // 被设置keeplive后  会多出一个生命周期函数  activated 页面重新被现实的时候执行
+    activated(){
+      if(this.lastCity!==this.city){
+        this.getHomeInfo()
+        this.lastCity =this.city
+      }
     }
   }
 </script>

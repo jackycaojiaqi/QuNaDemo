@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import { mapState ,mapGetters} from 'vuex'
+import { mapState } from 'vuex'
   export default {
     name: 'HomeHeader',
     computed:{
       ...mapState(['city']),
-      ...mapGetters(['doubleCity'])
+    
     }
 
   }
@@ -54,7 +54,7 @@ import { mapState ,mapGetters} from 'vuex'
         margin-left -.04rem
         font-size .1rem
       min-width: 1.2rem
-      padding   0 .1rem 
+      padding   0 .01rem 
       color #fff
       float: right
       text-align center
