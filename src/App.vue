@@ -2,7 +2,7 @@
   <div id="app">
     <!--显示当前路由地址所对应的内容  根目录-->
     <!--keep-alive 直接去内存，不掉用多次网络 -->
-    <keep-alive>
+    <keep-alive exclude="Detail">
        <router-view/>
     </keep-alive>
    

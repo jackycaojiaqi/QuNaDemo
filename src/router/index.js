@@ -25,5 +25,9 @@ export default new Router({
       name: 'Detail',
       component: Detail
     }
-  ]
+  ],
+  // 每次下拉都会让当前页面在最顶端显示
+  scrollBehavior (to, from, savePosition) {
+    return {x: 0, y: 0}
+  }
 })
