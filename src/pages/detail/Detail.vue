@@ -53,6 +53,7 @@ import axios from 'axios'
                  this.categoryList = data.categoryList
                  this.bannerImg = data.bannerImg
                 }
+                  console.log(res)
             }
         },
         mounted(){

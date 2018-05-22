@@ -10,7 +10,12 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 在这里配置接口域名有多个就配置多个
+    proxyTable: {
+      'api':{
+        target:'http://localhost:80'
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -50,8 +55,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
+    // assetsPublicPath: '/',
+    assetsPublicPath: '/qunawang',
     /**
      * Source Maps
      */

@@ -61,10 +61,10 @@ export default {
 
         .icon-img {
             position: absolute;
-            top: 0;
+            top: .2rem;
             left: 0;
             right: 0;
-            bottom: 0.44rem;
+            bottom: 0.34rem;
             box-sizing: border-box;
             padding: 0.2rem;
 
